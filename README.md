@@ -29,8 +29,9 @@ In this method we investigate the frequency domain of the GAN generated images t
 
 ## Face feature Analysis
 In this method we use the facial landmark positions to expose GAN synthesized images. The approach is based on the observation that the facial components configuration produced by GAN models differs from that of real faces since there aren’t any global limitations.  This approach is more detailed and comprehensive that uses 32 facial points instead of 2 points. A SVM classifier is trained on the facial landmark locations to classify GAN synthesized faces from the real face.
-
-![alt_text](https://github.com/rakesh09111996/Detecting-GAN-generated-Images/blob/335fbf187666e3054fa3f366189601e67e5c5349/Facial_landmarks.png)
+<p align="center">
+  <img src="[your_image_url_here](https://github.com/rakesh09111996/Detecting-GAN-generated-Images/blob/335fbf187666e3054fa3f366189601e67e5c5349/Facial_landmarks.png)" alt="Facial Landmark points detected for given image">
+</p>
 
 The feature vectors and labels of train and test set are split into 80:20 ratio using train_test_split function from the sklearn model selection. A grid search is used to perform exhaustive search over grid parameters to find the optimal hyperparameters for the SVM classifier. 5-fold cross validation object is used to ensure balance between the training and validation sets. The SVM classifier is trained with the feature vectors and corresponding labels using the method of the grid search object. The model is then tested with profile images of Instagram public account. Using Instagram API, user profile information is fetched including user profile picture by providing Instagram user ID. The landmark facial key points are detected using the dlib library. The predicted landmark are combined and then normalized to [0,1]x[0,1] region. The profile picture is determined GAN or not using the normalized feature vectors by the pre trained SVM model.
 
