@@ -1,5 +1,5 @@
 # rsantha-kmandak-arsivak-hasugum-finalProject
-
+![alt_text](https://github.com/rakesh09111996/Detecting-GAN-generated-Images/blob/eb7207a75ba98fbcfe3809cc7e385af3b020cbf2/Project%20Poster.pdf)
 Generative adversarial Networks (GANs) has become prevalent in producing realistic images, videos and other forms of data for malicious purpose such as spreading fake news
 in social media. In order to detect and stop the exploitation of this technology, it is now crucial to detect GAN generated images. GAN generated images often have some 
 artifacts different from real images. So, In this project, we explored four different approaches for detecting GAN generated images: 
